@@ -1,0 +1,108 @@
+/* Footer Styles */
+.footer {
+  background-color: #282c34;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  position: relative;
+  font-family: 'BlackIron', sans-serif;
+}
+
+.footer .social-icons {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.footer .social-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer .social-icon i {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer .social-icon span {
+  font-size: 0.875rem;
+}
+
+.footer .social-icon:hover {
+  transform: scale(1.2);
+  color: #f3e306;
+}
+
+.footer .social-icon:hover i {
+  transform: scale(1.2);
+  color: #abfa17;
+}
+
+.footer-text {
+  font-size: 0.875rem;
+  margin-top: 1rem;
+}
+
+/* Dark Mode */
+.footer.dark {
+  background-color: #3f3f3f;
+  color: #dddcff;
+  font-family: 'BlackChery', sans-serif;
+}
+
+.footer.dark .social-icon:hover,
+.footer.dark .social-icon:hover i {
+  color: #ff5733;
+  animation: wiggle 1s ease-in-out; /* Add wiggle animation in Dark Mode */
+}
+
+/* Classic Mode */
+.footer.classic {
+  background-color: #b16305;
+  color: #f7e81b;
+  font-family: 'Milgo', serif;
+}
+
+.footer.classic .social-icon:hover,
+.footer.classic .social-icon:hover i {
+  color: #6dff33;
+  animation: wiggle 1s ease-in-out; /* Add wiggle animation in Classic Mode */
+}
+
+/* Color Mode */
+.footer.color {
+  background-color: rgb(130, 228, 50);
+  color: rgb(3, 51, 6);
+  font-family: 'Cheri', cursive;
+}
+
+.footer.color .social-icon:hover,
+.footer.color .social-icon:hover i {
+  color: #c70365;
+  animation: wiggle 1s ease-in-out; /* Add wiggle animation in Color Mode */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .footer .social-icons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer .social-icon {
+    margin: 10px 0;
+  }
+}
+
+/* Keyframe Animations */
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0); }
+  25% { transform: rotate(10deg); }
+  50% { transform: rotate(-10deg); }
+  75% { transform: rotate(10deg); }
+}

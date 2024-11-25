@@ -1,0 +1,131 @@
+/* src/styles.css */
+body {
+    /* font-family: 'Arial', sans-serif; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  header {
+    background: #333;
+    padding: 1rem;
+  }
+  
+  header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  header nav ul li {
+    margin: 0 1rem;
+  }
+  
+  header nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  section {
+    padding: 2rem;
+    margin: 1rem 0;
+  }
+  
+  .about, .projects, .skills, .contact {
+    background: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  h1, h2 {
+    font-weight: 600;
+  }
+  
+  p {
+    font-weight: 400;
+  }
+  
+  .project-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .project-item {
+    flex: 1;
+    margin: 1rem;
+    padding: 1rem;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  form div {
+    margin-bottom: 1rem;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  form input, form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  /* src/styles.css */
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #f39c12;
+  }
+  
+  .home nav a {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    border-radius: 4px;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .home nav a:hover {
+    transform: scale(1.1);
+    background: #444;
+  }
+  
+  .project-item:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+  /* src/styles.css */
+:root {
+    --primary-color: #f39c12;
+    --secondary-color: #333;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+  }
+  
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  .header {
+    background: var(--secondary-color);
+  }
+  
+  .header nav ul li a {
+    color: white;
+  }
+  
+  .home nav a {
+    background: var(--primary-color);
+  }

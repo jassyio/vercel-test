@@ -1,0 +1,57 @@
+/* Default Light Mode */
+.certificates {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.certificates.dark {
+  background-color: #222;
+}
+
+.certificates.classic {
+  background-color: #c47414;
+  font-family: 'Times New Roman', serif;
+}
+
+.certificates.color {
+  background-color: #00aaff;
+}
+
+.certificates h2 {
+  font-size: 2.5rem;
+}
+
+.certificates.light h2, .certificates.classic h2 {
+  color: #282c34;
+}
+
+.certificates.dark h2 {
+  color: #ddd;
+}
+
+.certificates.color h2 {
+  color: #fff;
+}
+
+.certificates p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.certificates.light p, .certificates.classic p {
+  color: #333;
+}
+
+.certificates.dark p {
+  color: #bbb;
+}
+
+.certificates.color p {
+  color: #fff;
+}

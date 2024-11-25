@@ -1,0 +1,57 @@
+/* Default Light Mode */
+.contact {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact.dark {
+  background-color: #222;
+}
+
+.contact.classic {
+  background-color: #c47414;
+  font-family: 'Times New Roman', serif;
+}
+
+.contact.color {
+  background-color: #6a0dad;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+}
+
+.contact.light h2, .contact.classic h2 {
+  color: #282c34;
+}
+
+.contact.dark h2 {
+  color: #ddd;
+}
+
+.contact.color h2 {
+  color: #fff;
+}
+
+.contact p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.contact.light p, .contact.classic p {
+  color: #333;
+}
+
+.contact.dark p {
+  color: #bbb;
+}
+
+.contact.color p {
+  color: #fff;
+}

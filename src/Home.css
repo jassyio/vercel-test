@@ -1,0 +1,176 @@
+.home {
+  padding: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Backgrounds */
+.home.light {
+  background-color: #f3f3f3;
+}
+
+.home.dark {
+  background-color: #222;
+}
+
+.home.classic {
+  background-color: #c47414;
+}
+
+.home.color {
+  background-color: #ff5733;
+}
+
+/* Text Colors */
+.home.light, .home.classic {
+  color: #282c34;
+}
+
+.home.dark {
+  color: #ddd;
+}
+
+.home.color {
+  color: #fff;
+}
+
+/* Welcome Section */
+.welcome {
+  text-align: center;
+}
+
+.welcome h1 {
+  font-size: 3rem;
+}
+
+.welcome.light h1, .welcome.classic h1 {
+  color: #282c34;
+}
+
+.welcome.dark h1 {
+  color: #ddd;
+}
+
+.welcome.color h1 {
+  color: #fff;
+}
+
+.welcome .tagline {
+  font-size: 1.5rem;
+}
+
+.welcome.light .tagline, .welcome.classic .tagline {
+  color: #ff5733;
+}
+
+.welcome.dark .tagline {
+  color: #bbb;
+}
+
+.welcome.color .tagline {
+  color: #fff;
+}
+
+/* Mission and Vision Sections */
+.mission-vision {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.mission, .vision {
+  width: 45%;
+}
+
+.mission h2, .vision h2 {
+  font-size: 2rem;
+}
+
+.mission.light h2, .vision.light h2, .mission.classic h2, .vision.classic h2 {
+  color: #282c34;
+}
+
+.mission.dark h2, .vision.dark h2 {
+  color: #ddd;
+}
+
+.mission.color h2, .vision.color h2 {
+  color: #fff;
+}
+
+.mission p, .vision p {
+  font-size: 1rem;
+}
+
+.mission.light p, .vision.light p, .mission.classic p, .vision.classic p {
+  color: #333;
+}
+
+.mission.dark p, .vision.dark p {
+  color: #bbb;
+}
+
+.mission.color p, .vision.color p {
+  color: #fff;
+}
+
+/* Hire Me Section */
+.hire-me {
+  text-align: center;
+}
+
+.hire-me h2 {
+  font-size: 2rem;
+}
+
+.hire-me.light h2, .hire-me.classic h2 {
+  color: #282c34;
+}
+
+.hire-me.dark h2 {
+  color: #ddd;
+}
+
+.hire-me.color h2 {
+  color: #fff;
+}
+
+.hire-me p {
+  font-size: 1rem;
+}
+
+.hire-me.light p, .hire-me.classic p {
+  color: #333;
+}
+
+.hire-me.dark p {
+  color: #bbb;
+}
+
+.hire-me.color p {
+  color: #fff;
+}
+
+.hire-me a {
+  text-decoration: none;
+}
+
+.hire-me.light a, .hire-me.classic a {
+  color: #f7aa98;
+}
+
+.hire-me.dark a {
+  color: #bbb;
+}
+
+.hire-me.color a {
+  color: #fff;
+}
+
+.hire-me a:hover {
+  text-decoration: underline;
+}

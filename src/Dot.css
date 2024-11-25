@@ -1,0 +1,43 @@
+/* src/Dot.css */
+
+.dot {
+    padding-top: 40px;
+    width: 20px;
+    height: 10px;
+    margin: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: red;
+    animation: wiggle 1s infinite ease-in-out, colorChange 10s infinite ease-in-out;
+  }
+  
+  @keyframes wiggle {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @keyframes colorChange {
+    0%, 100% {
+      background-color: red;
+    }
+    16% {
+      background-color: orange;
+    }
+    32% {
+      background-color: yellow;
+    }
+    48% {
+      background-color: green;
+    }
+    64% {
+      background-color: blue;
+    }
+    80% {
+      background-color: indigo;
+    }
+  }
+  

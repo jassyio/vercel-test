@@ -1,0 +1,45 @@
+.tetris-animation {
+    text-align: center;
+    position: relative;
+    margin-top: 40px;
+    padding-top: 20px;
+  }
+  
+  .tetris-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top:40px;
+    height: 100px; /* Adjust height as needed */
+    background: none;
+    width: 100%;
+    overflow: hidden;
+    position: absolute; /* Position relative to the content */
+    margin-top: 40; /* Push it to the bottom of the container */
+  }
+  
+  .tetris-block {
+    width: 30px;
+    height: 30px;
+    background: #ff5733;
+    position: absolute;
+    animation: fall 8s infinite;
+  }
+  
+  @keyframes fall {
+    0% {
+      top: -30px;
+    }
+    100% {
+      top: 100%;
+    }
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .tetris-block {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  

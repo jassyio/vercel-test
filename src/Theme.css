@@ -1,0 +1,107 @@
+/* src/theme.css */
+.theme-dropdown {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    background: var(--dropdown-background);
+    border: 1px solid var(--navbar-text);
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .theme-dropdown button {
+    margin: 5px 0;
+    padding: 10px;
+    color: var(--dropdown-text);
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .theme-dropdown button:hover {
+    background-color: var(--dropdown-hover-background);
+  }
+  
+  .theme-dropdown button.color-mode:hover {
+    background-color: var(--color-mode-hover);
+  }
+  
+  /* Navbar Styles */
+  .nav {
+    display: flex;
+    justify-content: center;
+    background-color: var(--navbar-background);
+  }
+  
+  .nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav li {
+    position: relative;
+  }
+  
+  .nav a,
+  .dropdown-button {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: var(--navbar-text);
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+    border: 2px solid var(--navbar-text); /* Adding border for all items */
+    border-radius: 5px;
+  }
+  
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--dropdown-background);
+    border: 1px solid var(--navbar-text);
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 1; /* Ensure it appears above other content */
+  }
+  
+  .dropdown-menu.open {
+    display: block;
+  }
+  
+  .dropdown-menu li {
+    width: 100%;
+  }
+  
+  .dropdown-menu li button {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    color: var(--dropdown-text);
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .dropdown-menu li button:hover {
+    background-color: var(--dropdown-hover-background);
+  }
+  
+  .dropdown-menu li button.color-mode:hover {
+    background-color: var(--color-mode-hover);
+  }
+  

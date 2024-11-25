@@ -1,0 +1,189 @@
+:root {
+  --navbar-background: none;
+  --navbar-text: #e23d74;
+  --navbar-hover-background: none;
+  --navbar-hover-text: none;
+  --color-mode-hover: #6a0dad; /* Purple color for Color Mode button on hover */
+  --dropdown-background: hsl(0, 22%, 15%); /* Dark background for dropdown menu */
+  --dropdown-text: #fff; /* Light text color for dropdown menu */
+  --dropdown-hover-background: none; /* Hover background for dropdown items */
+}
+
+/* Navbar Styles */
+.nav {
+  display: flex;
+  justify-content: center;
+  background-color: var(--navbar-background);
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav li {
+  position: relative;
+}
+
+.nav a,
+.dropdown-button {
+  text-decoration: none;
+  padding: 10px 15px;
+  color: var(--navbar-text);
+  transition: background-color 0.3s, color 0.3s;
+  display: inline-block;
+  border: 2px solid var(--navbar-text); /* Adding border for all items */
+  border-radius: 5px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--dropdown-background);
+  border: 1px solid var(--navbar-text);
+  border-radius: 4px;
+  overflow: hidden;
+  z-index: 1; /* Ensure it appears above other content */
+}
+
+.dropdown-menu.open {
+  display: block;
+}
+
+.dropdown-menu li {
+  width: 100%;
+}
+
+.dropdown-menu li button {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  color: var(--dropdown-text);
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-menu li button:hover {
+  background-color: var(--dropdown-hover-background);
+}
+
+.dropdown-menu li button.color-mode:hover {
+  background-color: var(--color-mode-hover);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 1.5rem; /* Smaller font size for smaller screens */
+  }
+
+  .header nav ul {
+    flex-direction: column; /* Stack menu items vertically */
+    align-items: center; /* Center align the menu items */
+  }
+
+  .header nav ul li {
+    margin: 10px 0; /* Add vertical spacing between menu items */
+  }
+
+  .header nav ul li a {
+    padding: 0.5rem 2rem; /* Increase padding for better touch targets */
+  }
+}
+
+@media (max-width: 480px) {
+  .header-title {
+    font-size: 2rem; /* Even smaller font size for very small screens */
+  }
+
+  .header nav ul li a {
+    padding: 0.5rem 1.5rem; /* Adjust padding for very small screens */
+  }
+}
+
+/* Keyframe Animations */
+@keyframes flip {
+  0% { transform: rotateY(0); }
+  50% { transform: rotateY(180deg); }
+  100% { transform: rotateY(360deg); }
+}
+
+@keyframes turn {
+  0% { transform: rotate(0); }
+  50% { transform: rotate(180deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0); }
+  25% { transform: rotate(10deg); }
+  50% { transform: rotate(-10deg); }
+  75% { transform: rotate(10deg); }
+}
+
+@keyframes zoomOut {
+  0% { transform: scale(1); }
+  100% { transform: scale(0); }
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes blast {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Theme-specific styles */
+
+/* Light Mode */
+.light .nav a:hover,
+.light .dropdown-button:hover {
+  animation: wiggle 1s ease-in-out;
+}
+
+/* Dark Mode */
+.dark .nav a:hover,
+.dark .dropdown-button:hover {
+  animation: flip 3s ease-in-out;
+}
+
+/* Classic Mode */
+.classic .nav a:hover,
+.classic .dropdown-button:hover {
+  animation: zoomOut 1s ease-in-out;
+}
+
+/* Color Mode */
+.color .nav a:hover,
+.color .dropdown-button:hover {
+  animation: wiggle 0.5s ease-in-out, flip 1s ease-in-out, blast 1.5s ease-in-out;
+}

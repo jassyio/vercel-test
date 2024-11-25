@@ -1,0 +1,129 @@
+/* src/Chat.css */
+
+.chat-container {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 10px;
+}
+
+.chat-icon {
+  background-color: #282c34;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.chat-icon:hover {
+  transform: scale(1.2);
+  background-color: #ff5733;
+}
+
+.chat-icon:active {
+  animation: burst 0.5s ease-out forwards;
+}
+
+@keyframes burst {
+  to {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.chat-window {
+  width: 300px;
+  max-width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 60px; /* Adjust based on your layout */
+  right: 0;
+}
+
+.chat-header {
+  background-color: #282c34;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.chat-body {
+  padding: 10px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.message {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+
+form {
+  display: flex;
+}
+
+input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+button {
+  background-color: #282c34;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ff5733;
+}
+
+.close-icon {
+  position: absolute;
+  bottom: 20px; /* Adjust to position near the bottom */
+  /* Position it next to the chat icon */
+  right: 240px;
+  transform: translateX(-50%);
+  background-color: #020000;
+  color: white;
+  padding: 5px;
+  border-radius: 10%;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.close-icon:hover {
+  background-color: #d32f2f;
+}
